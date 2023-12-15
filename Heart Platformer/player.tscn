@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kw2a4"]
 
 [node name="Player" type="CharacterBody2D"]
+floor_snap_length = 2.0
 script = ExtResource("1_8s35e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
