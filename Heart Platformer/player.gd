@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 100.0
-const ACCELERATION = 600.0
+const ACCELERATION = 800.0
 const FRICTION = 1000.0
 const JUMP_VELOCITY = -300.0
 
@@ -11,8 +11,11 @@ func _physics_process(delta):
 	apply_gravity(delta)
 	handle_jump()
 	var input_axis = Input.get_axis("ui_left", "ui_right")
-	handle_acceleration(input_axis, delta)
-	apply_fricton(input_axis, delta)
+	
+	if input_axis !=0:
+		velocity.x = move_toward(velocity.x, SPEED * input_axis, ACCELERATION * delta)
+		
+	apply_friction(input_axis, delta)
 	move_and_slide()
 	
 func apply_gravity(delta):
@@ -28,5 +31,9 @@ func handle_jump():
 				velocity.y = JUMP_VELOCITY / 2
 				
 func handle_acceleration(input_axis, delta):
-	if input_axis == 0:
-		velocity.x = move_toward()
+	if input_axis != 0:
+		velocity.x = move_toward(velocity.x, SPEED * input_axis, ACCELERATION * delta)
+		
+func apply_friction(input_axis, delta):
+		if input_axis == 0:
+			velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
