@@ -78,19 +78,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kw2a4"]
-size = Vector2(2, 2.5)
+size = Vector2(5, 10.9062)
 
 [node name="Player" type="CharacterBody2D"]
 floor_snap_length = 2.0
 script = ExtResource("1_8s35e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.69407e-21, -2)
-scale = Vector2(0.166667, 0.2)
+position = Vector2(1, -7)
+scale = Vector2(0.5625, 0.675)
 sprite_frames = SubResource("SpriteFrames_h3syi")
-animation = &"run"
-frame_progress = 0.827496
+animation = &"idle"
+frame_progress = 0.651202
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(1, -6)
 shape = SubResource("RectangleShape2D_kw2a4")
