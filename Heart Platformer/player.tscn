@@ -94,3 +94,7 @@ frame_progress = 0.651202
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -6)
 shape = SubResource("RectangleShape2D_kw2a4")
+
+[node name="CoyoteJumpTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
