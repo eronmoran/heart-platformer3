@@ -79,22 +79,22 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kw2a4"]
-size = Vector2(5, 10.9062)
+size = Vector2(11.5, 20.4531)
 
 [node name="Player" type="CharacterBody2D"]
-floor_snap_length = 2.0
+floor_snap_length = 3.0
 script = ExtResource("1_8s35e")
 movement_data = ExtResource("2_6i6p7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -7)
-scale = Vector2(0.5625, 0.675)
+position = Vector2(7.125, -13.125)
+scale = Vector2(1.07292, 1.2875)
 sprite_frames = SubResource("SpriteFrames_h3syi")
 animation = &"idle"
 frame_progress = 0.651202
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -6)
+position = Vector2(7.25, -10.7734)
 shape = SubResource("RectangleShape2D_kw2a4")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
